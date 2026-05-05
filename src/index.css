@@ -1,0 +1,45 @@
+/*
+ * src/index.css
+ * ─────────────
+ * Global stylesheet — loaded once by main.jsx.
+ * Tailwind's three directives inject all utility classes at build time.
+ */
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ 
+ /* ── Prevent scroll bounce / rubber-band on touch devices ── */
+ html {
+   overscroll-behavior: none;
+ }
+ 
+ /* ── Custom scrollbar (hidden — no scroll in this experience) ── */
+ ::-webkit-scrollbar { display: none; }
+ 
+ /*
+  * ── WebGL canvas: fill its parent exactly ──
+  * @react-three/fiber inserts a <canvas> inside the div we pass className to.
+  * This rule ensures it never causes layout overflow.
+  */
+ canvas {
+   display: block;
+   outline: none;
+ }
+ 
+ /*
+  * ── Password input: remove browser auto-fill blue background ──
+  */
+ input:-webkit-autofill,
+ input:-webkit-autofill:focus {
+   transition: background-color 600000s 0s, color 600000s 0s;
+ }
+ 
+ /*
+  * ── Selection styling inside the experience ──
+  */
+ ::selection {
+   background: rgba(124, 58, 237, 0.35);
+   color: #fff;
+ }
+ 
