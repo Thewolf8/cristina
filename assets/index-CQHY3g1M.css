@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;html{overscroll-behavior:none}::-webkit-scrollbar{display:none}canvas{display:block;outline:none}input:-webkit-autofill,input:-webkit-autofill:focus{transition:background-color 600000s 0s,color 600000s 0s}::selection{background:#7c3aed59;color:#fff}
